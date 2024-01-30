@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rutas/src/views/home.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -31,10 +31,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
-                );
+                context.go('/home');
               },
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
